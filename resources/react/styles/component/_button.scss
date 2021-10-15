@@ -1,0 +1,31 @@
+@mixin button {
+    width: 100%;
+    background: $color-primary;
+    box-shadow: $btn_box_shadow;
+    height: 6.4rem;
+    border: 0;
+    border-radius: 6px;
+    color: $color-white;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+@mixin user_details_button {
+    width: 30rem;
+    height: 6.4rem;
+    font-size: 1.6rem;
+    background: $color-primary;
+    box-shadow: $btn_box_shadow;
+    color: $color-white;
+    border-radius: 6px;
+    border: 0;
+}
+
+@mixin normalButton {
+    box-shadow: $btn_box_shadow;
+    height: 6.4rem;
+    border: 0;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    cursor: pointer;
+}

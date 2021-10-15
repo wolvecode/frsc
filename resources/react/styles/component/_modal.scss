@@ -1,0 +1,78 @@
+.modal {
+  position: relative;
+  margin-top: 3.2rem;
+  max-height: 804px;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+  img {
+    width: 100%;
+    max-height: 100%;
+  }
+  .modal_layer {
+    position: absolute;
+    background: rgba(9, 17, 24, 0.7);
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 4rem;
+
+    .close_modal {
+      position: absolute;
+      width: 7rem;
+      height: 7rem;
+      background: #dfe8fc80;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: $color-white;
+      cursor: pointer;
+    }
+    .face_box {
+      width: 50%;
+      height: 50rem;
+      // background-color: transparent;
+      border: solid  $color-primary-light;
+      margin: 6rem auto 6rem auto;
+      border-radius: 10px;
+    }
+    .finger_box {
+      width: 50%;
+      height: 50rem;
+      background-color: $color-white;
+      margin: 6rem auto 6rem auto;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: auto;
+      }
+    }
+    .action {
+      width: 11.6rem;
+      height: 11.6rem;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 4px solid #dfe8fc;
+      padding: 1rem;
+      overflow: hidden;
+      cursor: pointer;
+      .sub_action {
+        width: 100%;
+        height: 100%;
+        background-color: #dfe8fc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        span {
+          color: #0a1a47;
+        }
+      }
+    }
+  }
+}

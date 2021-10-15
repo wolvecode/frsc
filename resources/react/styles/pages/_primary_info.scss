@@ -1,0 +1,178 @@
+@import "../base/base";
+
+$nav_light: #eef1fc;
+
+.page_content {
+    display: flex;
+
+    nav {
+        position: fixed;
+        width: 22rem;
+        height: 100vh;
+        background-color: $nav_light;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        .logo {
+            margin-top: 6rem;
+            margin-bottom: 8.4rem;
+        }
+        .nav_item {
+            display: inline-block;
+            width: 60%;
+            height: 5rem;
+            margin-bottom: 3.5rem;
+            overflow: hidden;
+            border-radius: 7px;
+            text-align: center;
+
+            a {
+                width: 100%;
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 16px;
+                height: 100%;
+                text-decoration: none;
+                color: #8e919c;
+                span {
+                    display: inline-block;
+                    padding-right: 1.3rem;
+                    color: #8e919c;
+                }
+            }
+            a:hover {
+                color: $color-primary;
+                span {
+                    color: $color-primary;
+                }
+            }
+            a.active {
+                color: $color-primary;
+                background: #d3ddf8;
+
+                span {
+                    color: $color-primary;
+                }
+            }
+        }
+        .last {
+            margin-top: 16rem - 3.5rem;
+            a {
+                color: red !important;
+            }
+            span {
+                color: red !important;
+            }
+        }
+
+        .btn {
+            background: #d3ddf8;
+        }
+    }
+
+    .col_content {
+        width: 100%;
+        margin-left: 22rem;
+        padding: 2rem 5rem 5rem 5rem;
+
+        .heading {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .heading_text {
+            h3 {
+                font-size: 2.4rem;
+                margin: 0;
+            }
+            span {
+                font-size: 1.4rem;
+                color: $color-primary-light;
+                display: inline-block;
+                padding-top: 0.4rem;
+            }
+        }
+
+        .btn {
+            background-color: $color-secondary;
+            border: none;
+            width: 20rem;
+            height: 5.8rem;
+            color: $color-white;
+            font-size: 16px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                display: inline-block;
+                margin-right: 0.6rem;
+            }
+        }
+        .sub_content_box {
+            margin-top: 3.2rem;
+            border-radius: 10px;
+            border: 1px solid #e6e8ec;
+            box-shadow: $box_shadow_hover;
+            border-radius: 10px;
+            padding: 5.4rem 0;
+
+            .sub_content_heading {
+                padding: 0 4.6rem;
+                display: flex;
+                border-bottom: 1px solid $nav_light;
+
+                .sub_link {
+                    margin-right: 4.209rem;
+                    margin-bottom: 0;
+                    padding-bottom: 1.75rem;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    color: $color-primary;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+
+                .sub_link.active {
+                    border-bottom: solid $color-primary;
+                }
+            }
+            .sub_content_children {
+                padding: 4.1rem 4.6rem;
+            }
+            .sub_link_line {
+                // position: absolute;
+                border: 3px solid $color-primary;
+                margin-top: -0.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .page_content nav {
+        display: none;
+    }
+    .page_content .col_content {
+        margin-left: 0%;
+        padding: 1rem;
+    }
+    .modal_layer {
+        width: 100%;
+        padding: 0;
+    }
+    .sub_content_box {
+        .sub_content_children {
+            padding: 0.1rem 0.6rem;
+        }
+        .sub_content_heading {
+            padding: 0 0rem;
+        }
+    }
+}

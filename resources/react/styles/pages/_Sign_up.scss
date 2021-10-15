@@ -1,0 +1,148 @@
+.auth {
+  background-image: linear-gradient(
+      0deg,
+      rgba(10, 26, 71, 0.84),
+      rgba(10, 26, 71, 0.84)
+    ),
+    url(../../assest/image/sign_up_bg.png);
+
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: fixed;
+  height: 100vh;
+
+  .col-text-content {
+    width: 70%;
+    margin: 0 auto;
+    // font-size: rem;
+    font-size: 2rem;
+
+    padding: 25rem 0 0 0;
+
+    .info {
+      line-height: 3.8rem;
+      color: white;
+      span {
+        font-weight: 700;
+      }
+      .name {
+        padding: 2rem 2rem 2rem 0;
+        font-weight: 500;
+        line-height: 2.2rem;
+      }
+    }
+    .dwn_quote {
+      text-align: right;
+    }
+  }
+}
+
+.col-form-content {
+  padding: 0.8rem;
+  margin-left: 50%;
+  .logo {
+    text-align: right;
+    margin-top: 1rem;
+  }
+  .col_box {
+    width: 65%;
+    margin: 1rem auto;
+    h3 {
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 36px;
+      padding-top: 2rem;
+      margin: 0;
+      //   margin-top: 6.75rem;
+      margin-bottom: .6rem;
+    }
+    .info {
+      font-family: Inter;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      color: $color-primary-shade;
+    }
+    hr {
+      border: 1px solid #f5f5f5;
+      margin: 3rem 0;
+    }
+    .form_group {
+      margin-top: 1.4rem;
+      label {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #696f79;
+        display: inline-block;
+        margin-bottom: 1.4rem;
+      }
+      .input {
+        @include input;
+      }
+      .input:focus {
+        border: 1px solid #0a1a47;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 10px 3px $box-shadow-dark;
+      }
+      span {
+        position: relative;
+        i {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 3.1rem;
+          font-size: 1.51rem;
+          cursor: pointer;
+          color: #696f79;
+        }
+      }
+    }
+
+    .btn_box {
+      margin-top: 4rem;
+      button {
+        @include button;
+      }
+    }
+
+    .lock_info {
+      text-align: center;
+      margin: 2.9rem 0 1.9rem 0;
+      color: $color-primary-shade;
+      font-size: 1.2rem;
+
+      i {
+        display: inline-block;
+        padding-right: 1.1rem;
+      }
+    }
+  }
+  .water_mark {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    text-align: right;
+    padding: 0 ;
+    color: $color-primary-shade;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  html{
+    font-size: 8px;
+  }
+  .auth {
+    display: none;
+  }
+  .col-form-content {
+    margin: 0;
+    margin-left: 0;
+    padding: 0.8rem;
+    width: 100%;
+  }
+  .col_box {
+    min-width: 100%;
+  }
+}

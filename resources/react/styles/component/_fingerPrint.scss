@@ -1,0 +1,103 @@
+.finger {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    padding-left: 27rem;
+    padding-top: 3rem;
+    padding-right: 5rem;
+}
+
+.finger_heading {
+    margin-bottom: 2rem;
+    .finger_heading_text {
+        h3 {
+            margin-top: 0;
+            font-weight: 600;
+            font-size: 2.4rem;
+            margin-bottom: 0.4rem;
+            color: $color-primary;
+        }
+        span {
+            font-size: 1.4rem;
+            color: $color-primary-light;
+        }
+    }
+}
+
+.fingerPrint {
+    margin-top: 2rem;
+    width: 100%;
+    height: 80vh;
+    background: rgba(9, 17, 24, 0.7);
+    border-radius: 10px;
+    .modal_layer {
+        padding: 2rem;
+        .close_modal {
+            background-color: $color-primary-light;
+            border-radius: 50%;
+            width: 4.5rem;
+            height: 4.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                font-size: 2rem;
+                color: $color-white;
+            }
+            cursor: pointer;
+        }
+        .tumb {
+            background-color: $color-white;
+            width: 35%;
+            margin: 0 auto;
+            margin-top: 4rem;
+            height: 30rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            img {
+                display: inline-block;
+
+                margin: 0 auto;
+                height: 23rem;
+            }
+        }
+        .action {
+            cursor: pointer;
+            width: 8rem;
+            height: 8rem;
+            margin: 0 auto;
+            // background-color: $color-primary-dim;
+            border: 3px solid $color-primary-dim;
+            border-radius: 50%;
+            margin-top: 2rem;
+            font-size: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.51rem;
+
+            .sub_action {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // width: 6.5rem;
+                // height: 6.5rem;
+                width: 100%;
+                height: 100%;
+                background-color: $color-primary-dim;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .finger {
+        padding-left: 5rem;
+
+        padding-right: 5rem;
+    }
+}

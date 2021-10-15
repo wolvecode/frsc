@@ -1,0 +1,40 @@
+.files_container {
+    width: 40%;
+    height: 38.7rem;
+    box-shadow: $box-shadow;
+    border-radius: 10px;
+    padding: 2rem;
+    h1 {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $color-primary;
+        margin-bottom: 3.2rem;
+    }
+
+    .single_doc {
+        background-color: $color-primary-dim;
+        max-width: 12.737rem;
+        width: 12.737rem;
+        height: 13.59rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 6px;
+        cursor: pointer;
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .fingerPrint_box {
+        margin-top: 1rem;
+
+        display: flex;
+        width: 100%;
+
+        .single_doc {
+            margin-right: 1rem;
+        }
+    }
+}

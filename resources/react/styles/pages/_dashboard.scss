@@ -1,0 +1,52 @@
+.col_content {
+    .offenceRecord {
+        color: $color-primary;
+        margin: 4rem 0 2rem 0;
+        font-family: Inter;
+    }
+    .offence_box {
+        min-height: 630px;
+        width: 100%;
+        left: 270px;
+        top: 728px;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04),
+            0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        .offence_nav {
+            // height: 8rem;
+            display: flex;
+            align-items: center;
+            padding: 0 4.5rem;
+            .navLink {
+                font-family: Inter;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 500;
+                display: inline-block;
+                margin-right: 2rem;
+                padding: 2rem 0;
+                color: $color-primary-light;
+            }
+        }
+        hr {
+            margin-top: -0.2rem;
+            border: 1px solid $color-primary-dim;
+        }
+    }
+}
+
+.dash_active {
+    color: primary;
+    border-bottom: 3px solid $color-primary;
+}
+
+.offence_result {
+    padding: 2rem;
+    position: relative;
+    min-height: 60vh;
+}
+
+// * {
+//     border: 1px solid red;
+// }

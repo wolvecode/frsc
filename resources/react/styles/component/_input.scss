@@ -1,0 +1,28 @@
+@mixin input {
+  width: 100%;
+  background: $color-white;
+  //   border: 1px solid $color-primary-shade;
+  box-shadow: 0px 4px 10px 3px $box-shadow-light;
+  border-radius: 0.6rem;
+  outline: none;
+  height: 5.5rem;
+  padding: 0 3rem;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  border: 1px solid #8692a6;
+}
+
+@mixin user_input {
+  background: $color-white;
+  border-radius: 0.6rem;
+  border: 1px solid $color-primary-shade;
+  outline: none;
+  height: 6.4rem;
+  padding:  1rem;
+  font-size: 1.4rem;
+  line-height: 1.694rem;
+}
+
+@mixin user_input_focus {
+  border: 1px solid $color-primary;
+}

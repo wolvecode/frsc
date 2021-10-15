@@ -1,0 +1,114 @@
+.welcome_page {
+    width: 60%;
+    margin: 0 auto;
+    h3 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        padding-top: 3rem;
+        margin: 0;
+        //   margin-top: 6.75rem;
+        margin-bottom: 1rem;
+    }
+    .info {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        color: $color-primary-shade;
+        margin-bottom: 2rem;
+    }
+    .option_box {
+        width: 100%;
+        height: 8.8rem;
+        background: #ffffff;
+        border: 0.2px solid #8692a6;
+        box-sizing: border-box;
+        box-shadow: $box_shadow_plane;
+        border-radius: 6px;
+        padding: 0 3rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        // justify-content: space-between;
+
+        .option_box_img {
+            @include flex_center;
+            transition: all 0.5s;
+
+            width: 5rem;
+            height: 5rem;
+            border: 0.14rem solid $color-primary;
+            border-radius: 50%;
+            font-size: 2rem;
+            span {
+                color: black;
+            }
+        }
+        .option_box_des {
+            padding-left: 2.9rem;
+            flex: 1;
+            .title {
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: $box_title_color;
+            }
+            .title_info {
+                margin: 0.4rem 0;
+                width: 80%;
+                font-size: 1.4rem;
+                display: flex;
+                color: #8692a6;
+            }
+        }
+        .right_arrow {
+            opacity: 0;
+            font-size: 2rem;
+        }
+    }
+    .option_box:hover {
+        background-color: $box_bgcolor;
+        cursor: pointer;
+        box-shadow: $box_shadow_hover;
+        .box_img_red {
+            background-color: red !important ;
+        }
+        .option_box_img {
+            background-color: $color-primary;
+            span {
+                color: $color-white;
+            }
+        }
+        .right_arrow {
+            opacity: 1;
+        }
+    }
+    .red {
+        color: red !important;
+    }
+    .box_img_red {
+        border: 0.14rem solid red !important;
+    }
+    .last {
+        // margin-bottom: 8.6rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    html {
+        font-size: 8px;
+    }
+    .welcome_page {
+        margin: 0;
+        margin-left: 0;
+        padding: 0.8rem;
+        width: 100%;
+    }
+    .col_box {
+        min-width: 100%;
+    }
+}

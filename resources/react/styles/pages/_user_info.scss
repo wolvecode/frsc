@@ -1,0 +1,77 @@
+.user {
+    //   .form_row:not(:last-child) {
+    //     margin-bottom: 4rem;
+    //   }
+    .form_row {
+        display: flex;
+        // justify-content: space-between;
+        margin-bottom: 4rem;
+
+        .form_group {
+            width: 30%;
+            //   margin: 0 1.66rem;
+            margin-right: 5rem;
+            label {
+                font-size: 1.6rem;
+                color: $color-primary-shade;
+            }
+            p {
+                margin: 0;
+            }
+            select {
+                color: $color-primary-light;
+            }
+            .relative {
+                position: relative;
+                padding: 0;
+                margin: 0;
+
+                .option {
+                    position: absolute;
+                    width: 2rem;
+                    background-color: white;
+                    color: $color-primary;
+                    right: 0.51rem;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    height: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 2rem;
+                }
+            }
+
+            .user_input {
+                @include user_input;
+                width: 100%;
+                margin-top: 1.4rem;
+            }
+            .user_input:focus {
+                @include user_input_focus;
+            }
+        }
+    }
+    .save {
+        text-align: right;
+        margin: 0;
+        button {
+            @include user_details_button;
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .user {
+        .form_row {
+            flex-direction: column;
+            margin-bottom: 0;
+
+            .form_group {
+                width: 100%;
+                margin: 1rem 0 1rem 0;
+            }
+        }
+    }
+}
