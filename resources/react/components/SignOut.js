@@ -6,20 +6,21 @@ const SignOut = ({ setSignOut, signOut }) => {
     const history = useHistory();
 
     const handleSigOut = (e) => {
+        e.preventDefault();
         setSignOut(!signOut);
-        return history.push("/login");
+        return history.push("/home");
     };
 
     const logout = (e) => {
-        // e.preventDefault()
+        e.preventDefault();
+
         axios
             .get("/logout")
-            .then((res) => console.log("user is successfully logout"))
+            .then((res) => {
+                history.push("/login");
+                alert("User logout");
+            })
             .catch((err) => err);
-
-        //   let path = "/login";
-        //   let history = useHistory();
-        //   history.push(path);
     };
 
     return (

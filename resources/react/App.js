@@ -10,51 +10,57 @@ import ScanNotFound from "./pages/Scan/ScanNotFound";
 import FingerPrint from "./components/FingerPrint";
 import SearchMain from "./pages/Search/SearchMain";
 import DashBoard from "./pages/Dashboard/DashBoard";
+import SignUp from "./pages/SignUp";
+import UserInfo from "./pages/Register/UserInfo";
 const App = () => {
-  return (
-    <Router>
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/home">
+                    <MainMenu />
+                </Route>
 
-        <Switch>
-          <Route exact path="/home">
-            <MainMenu />
-          </Route>
+                {/*<Route exact path="/errPage">*/}
+                {/*  <ErrPage />*/}
+                {/*</Route>*/}
 
-          {/*<Route exact path="/errPage">*/}
-          {/*  <ErrPage />*/}
-          {/*</Route>*/}
+                <Route path="/home/register">
+                    <PrimaryInfo />
+                </Route>
 
-          <Route path="/home/register">
-            <PrimaryInfo />
-          </Route>
+                <Route path="/home/register">
+                    <UserInfo />
+                </Route>
 
-          <Route exact path="/home/scan">
-            <Scan />
-          </Route>
+                <Route exact path="/home/scan">
+                    <Scan />
+                </Route>
 
-          <Route exact path="/home/scanNotFound">
-            <ScanNotFound />
-          </Route>
+                <Route exact path="/home/scanNotFound">
+                    <ScanNotFound />
+                </Route>
 
-          <Route exact path="/home/fingerPrint">
-            <FingerPrint />
-          </Route>
+                <Route exact path="/home/fingerPrint">
+                    <FingerPrint />
+                </Route>
 
-          <Route exact path="/home/searchMain">
-            <SearchMain />
-          </Route>
+                <Route exact path="/home/searchMain">
+                    <SearchMain />
+                </Route>
 
-          <Route exact path="/home/dashboard">
-            <DashBoard />
-          </Route>
+                <Route exact path="/home/dashboard">
+                    <DashBoard />
+                </Route>
 
-            <Route exact path="*">
-                <ErrPage />
-            </Route>
-
-        </Switch>
-
-    </Router>
-  );
+                <Route exact path="/login">
+                    <SignUp />
+                </Route>
+                <Route exact path="*">
+                    <ErrPage />
+                </Route>
+            </Switch>
+        </Router>
+    );
 };
 
 export default App;

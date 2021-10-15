@@ -67,7 +67,7 @@ const Upload = () => {
             .then((res) => {
                 alert("picure uploaded");
                 localStorage.clear();
-                history.push("/home/scan");
+                history.push("/home/register");
             })
             .catch((err) => err);
     };
