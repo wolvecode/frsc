@@ -4,9 +4,11 @@ import { Link, useHistory, } from 'react-router-dom';
 
 
 const SignOut = ({setSignOut, signOut}) => {
+    const history = useHistory()
 
     const handleSigOut = (e)=>{
         setSignOut(!signOut)
+        return history.push('/')
       }
 
       const logout =  (e) => {
@@ -37,7 +39,7 @@ const SignOut = ({setSignOut, signOut}) => {
                         </button>
                         {/* <Link to="/login" className="btn btn_signOut">Sign up</Link> */}
 
-                        <button className="btn btn_signOut_outline"  onClick={handleSigOut} >
+                        <button className="btn btn_signOut_outline" type="reset" onClick={handleSigOut} >
                         Cancel
                         </button>
                     </div>

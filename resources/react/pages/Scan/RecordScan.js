@@ -11,7 +11,7 @@ const RecordScan = () => {
   }
     return (
         <>
-            {finger ? <FingerPrint finger={finger} setFinger={setFinger} /> : ( 
+            {finger ? <FingerPrint finger={finger} setFinger={setFinger}  /> : ( 
             <div className="record_scan">
               <div className="record_scan_content">
                 <div className="img_box">

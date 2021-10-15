@@ -35,7 +35,7 @@ class DriverController extends Controller
     {
         $request->validate(['id' => 'required']);
 
-        $data = Driver::find(4)->picture->passport;
+        $data = Driver::find($request->id)->picture->passport;
 
         return response()->json(['data' => $data]);
     }

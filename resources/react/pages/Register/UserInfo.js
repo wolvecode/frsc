@@ -4,8 +4,7 @@ import { FaCaretDown } from "react-icons/fa";
 import axios from "axios";
 
 const UserInfo = () => {
-
-    const [surName, setSurname] = useState('');
+    const [surName, setSurname] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -17,20 +16,12 @@ const UserInfo = () => {
     const [state, setState] = useState("");
     const [lga, setLga] = useState("");
     const [shouldRedirect, setShouldRedirect] = useState(false);
-   
-    
-
 
     if (shouldRedirect) {
         window.location = shouldRedirect;
     }
 
     const history = useHistory();
-
-    const handleReg = () =>{
-        return history.push("/home/register/contact")
-
-    }
 
     const handleSurname = (e) => {
         setSurname(e.target.value);
@@ -85,15 +76,15 @@ const UserInfo = () => {
         };
 
         axios
-        .post("/home/register/info", dataToSubmit)
-        .then((res) => {
-            localStorage.setItem(
-                "created_id",
-                JSON.stringify(res.data.data.id)
-            );
-            history.push("/home/register/contact");
-        })
-        .catch((err) => err);
+            .post("/home/register/info", dataToSubmit)
+            .then((res) => {
+                localStorage.setItem(
+                    "created_id",
+                    JSON.stringify(res.data.data.id)
+                );
+                history.push("/home/register/contact");
+            })
+            .catch((err) => err);
     };
 
     return (
@@ -304,7 +295,7 @@ const UserInfo = () => {
 
             <div className="save">
                 <div className="">
-                    <button onClick={handleReg} >Save</button>
+                    <button onClick={handleSubmit}>Save</button>
                 </div>
             </div>
         </form>

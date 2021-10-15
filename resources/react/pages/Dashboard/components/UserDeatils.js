@@ -7,7 +7,7 @@ const UserDeatils = () => {
     const [user, setUser] = useState([]);
     const [total, setTotal] = useState("");
     const [pic, setPic] = useState("");
-// fetch random user 
+    // fetch random user
     useEffect(() => {
         axios
             .post("/home/drivers/rand")
@@ -19,18 +19,17 @@ const UserDeatils = () => {
     }, []);
     // console.log(user);
 
-// fetch picture 
+    // fetch picture
 
     useEffect(() => {
         axios
-            .post("/home/driver/picture", {id : user.id} )
+            .post("/home/driver/picture", { id: user.id })
             .then((res) => {
                 setPic(res.data.data);
             })
             .catch((err) => err);
-
     }, [user]);
-// fetch total offense 
+    // fetch total offense
     useEffect(() => {
         axios
             .post("/home/drivers/count", { id: user.id })

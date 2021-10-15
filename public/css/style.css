@@ -361,10 +361,11 @@ button {
 .demo-image-preview {
   position: relative;
   text-align: center;
+  width: 200px;
 }
 
 .demo-image-preview > img {
-  width: 100%;
+  max-width: 100%;
 }
 
 /* fullscreen enable by props */
@@ -373,15 +374,13 @@ button {
   height: 100vh;
 }
 
-.webcam {
-  overflow: hidden;
-}
-.webcam img {
-  max-width: 50%;
-}
-
-.camera {
-  display: none;
+.regFinger {
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
 
 .modal {
@@ -552,12 +551,14 @@ button {
   overflow: hidden;
   width: 10.98rem;
   height: 10.98rem;
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .page_sub_content .profile_edit .img_des_box img {
   display: inline-block;
-  width: 10.98rem;
-  height: 10.98rem;
+  width: 12rem;
+  height: 12rem;
   -o-object-fit: cover;
      object-fit: cover;
 }

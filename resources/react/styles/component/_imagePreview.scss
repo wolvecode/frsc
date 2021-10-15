@@ -1,10 +1,11 @@
 .demo-image-preview {
     position: relative;
     text-align: center;
+    width: 200px;
 }
 
 .demo-image-preview > img {
-    width: 100%;
+    max-width: 100%;
 }
 
 // @media (max-width: 768px) {
@@ -19,13 +20,18 @@
     height: 100vh;
 }
 
-.webcam {
-    overflow: hidden;
-    img {
-        max-width: 50%;
-    }
+.regFinger {
+    position: absolute;
+    width: 100%;
+    // background-color: red;
+    top: 5%;
+    left: 50%;
+    height: 100%;
+    transform: translate(-50%, -50%);
 }
-
-.camera {
-    display: none;
-}
+// .webcam {
+//     position: absolute;
+//     top: 0;
+//     // width: 200px;
+//     overflow: hidden;
+// }

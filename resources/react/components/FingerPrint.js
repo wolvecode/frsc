@@ -19,7 +19,7 @@ const FingerPrint = ({finger, setFinger}) => {
   }
 
   const handleScanning = () => {
-    setScaning(!scaning);
+    setScaning(!scaning);                               
     setTimeout(() => {
     return  history.push("/home/dashboard")
     }, 7000);

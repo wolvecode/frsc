@@ -6,6 +6,15 @@ import user from "../../assest/image/userDone.png";
 import tumb from "../../assest/image/figPrint.svg";
 
 const UploadDone = () => {
+
+  // let preview = localStorage.getItem("image");
+
+  let preview = localStorage.getItem(
+    "image",
+    JSON.parse("image")
+);
+ 
+  
   return (
     <form className="user">
       <div className="form_row">
@@ -14,7 +23,7 @@ const UploadDone = () => {
         <div className="form_group ">
           <label htmlFor="surname">Passport</label>
           <div className="uploaded_img">
-            <img src={user} alt="" />
+            <img src={preview} alt="" />
           </div>
         </div>
       </div>
@@ -23,7 +32,7 @@ const UploadDone = () => {
         {/* user info  */}
 
         <div className="form_group uploaded">
-          <label htmlFor=""> Scan Right Thumb </label>
+          <label htmlFor=""> Right Thumb </label>
 
           <div className="uploaded_bttom">
             <div className="scanned">
@@ -37,7 +46,7 @@ const UploadDone = () => {
         </div>
 
         <div className="form_group">
-          <label htmlFor="surname">Scan Left Thumb</label>
+          <label htmlFor="surname">Left Thumb</label>
           <div className="uploaded_bttom">
             <div className="scanned">
               <span>
