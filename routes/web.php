@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Auth\LoginController;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\DriverController;
+use Symfony\Component\HttpFoundation\Response;
 use \App\Http\Controllers\OffenseController;
 
 Route::get('/', function () {
@@ -51,7 +52,7 @@ Route::prefix('home')->middleware('auth')->group(function () {
 
 Route::middleware('auth')->get('logout', function () {
     \Illuminate\Support\Facades\Auth::logout();
-    return redirect()->route('/');
+    return  response()->json(['message' => 'User log out successfully'], Response::HTTP_OK);
 });
 
 Route::middleware('guest')->group(function () {
