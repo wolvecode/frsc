@@ -189,6 +189,7 @@ const UserInfo = () => {
                             onChange={handleGender}
                             className="user_input"
                         >
+                            <option value="">select gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
