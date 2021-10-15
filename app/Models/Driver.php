@@ -48,4 +48,9 @@ class Driver extends  Model
     {
         return $this->hasOne(Driver::class, '','');
     }
+
+    public function picture()
+    {
+        return $this->hasOne(DriversUpload::class, 'driver_id', 'id');
+    }
 }

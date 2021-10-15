@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { AiOutlineScan } from "react-icons/ai";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useHistory, useRouteMatch } from "react-router-dom";
 import Camera from 'react-html5-camera-photo';
 import WebCam from "./components/WebCam";
 // import 'react-html5-camera-photo/build/css/index.css';
@@ -13,6 +13,7 @@ const Upload = () => {
   const [webCam, setWebCam] = useState(false);
   const [pic, setPic] = useState("");
   const { url } = useRouteMatch();
+  // const history = useHistory()
 
   const handleUploadPic = () => {
     setUploadPic(!uploadPic);
@@ -28,7 +29,6 @@ const Upload = () => {
 
   function handleTakePhoto (dataUri) {
     // Do stuff with the photo...
-    console.log('takePhoto', dataUri);
   }
 
 

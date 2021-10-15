@@ -27,7 +27,7 @@ const PrimaryInfo = () => {
       localStorage.clear();
 
       //redirect to new register page
-      history.push('/home/register');
+     return history.push('/home/dashboard');
       alert('Hello, you just clicked me');
   }
 

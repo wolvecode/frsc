@@ -3,7 +3,6 @@ import React, { Children } from 'react'
 
 
 const Table = ({children}) => {
-    console.log(children);
     return (
         <>
             <div className="table">

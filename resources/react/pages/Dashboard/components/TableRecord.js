@@ -1,7 +1,6 @@
 import React from 'react'
 
 const TableRecord = ( { id,date,type,amount, status,}) => {
-    // console.log(id);
 
     // styles 
     const dash_btn  = {

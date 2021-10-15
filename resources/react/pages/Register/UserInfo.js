@@ -4,24 +4,33 @@ import { FaCaretDown } from "react-icons/fa";
 import axios from "axios";
 
 const UserInfo = () => {
-    const [surName, setSurname] = useState(false);
+
+    const [surName, setSurname] = useState('');
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState(false);
+    const [email, setEmail] = useState("");
     const [nationality, setNationality] = useState("");
     const [phone, setPhone] = useState("");
     const [gender, setGender] = useState("");
-    const [birth, setBirth] = useState(false);
+    const [birth, setBirth] = useState("");
     const [nin, setNin] = useState("");
     const [state, setState] = useState("");
     const [lga, setLga] = useState("");
     const [shouldRedirect, setShouldRedirect] = useState(false);
+   
+    
+
 
     if (shouldRedirect) {
         window.location = shouldRedirect;
     }
 
     const history = useHistory();
+
+    const handleReg = () =>{
+        return history.push("/home/register/contact")
+
+    }
 
     const handleSurname = (e) => {
         setSurname(e.target.value);
@@ -295,7 +304,7 @@ const UserInfo = () => {
 
             <div className="save">
                 <div className="">
-                    <button type="submit">Save</button>
+                    <button onClick={handleReg} >Save</button>
                 </div>
             </div>
         </form>

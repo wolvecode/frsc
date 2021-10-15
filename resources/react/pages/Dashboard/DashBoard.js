@@ -28,7 +28,7 @@ const DashBoard = () => {
             })
             .catch((err) => err);
     }, []);
-
+    
     const [addOffence, setAddOffence] = useState(false);
 
     const [data, setData] = useState([]);

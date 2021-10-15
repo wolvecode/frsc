@@ -18,8 +18,14 @@
             overflow: hidden;
             width: 10.98rem;
             height: 10.98rem;
+            background-color: red;
+
             img {
-                max-width: 100%;
+                display: inline-block;
+                // max-width: 100%;
+                width: 10.98rem;
+                height: 10.98rem;
+                object-fit: cover;
             }
         }
         .profile_text {

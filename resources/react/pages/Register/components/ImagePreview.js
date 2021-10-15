@@ -6,7 +6,7 @@ export const ImagePreview = ({ dataUri, isFullscreen }) => {
   let classNameFullscreen = isFullscreen ? 'demo-image-preview-fullscreen' : '';
 
   return (
-    <div className={'demo-image-preview ' + classNameFullscreen}>
+    <div className='demo-image-preview'>
       <img src={dataUri} />
     </div>
   );

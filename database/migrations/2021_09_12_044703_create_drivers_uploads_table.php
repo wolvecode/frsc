@@ -17,8 +17,8 @@ class CreateDriversUploadsTable extends Migration
             $table->id();
             $table->foreignId('driver_id')->constrained('drivers');
             $table->string('passport');
-            $table->string('right_thumb');
-            $table->string('left_thumb');
+            $table->string('right_thumb')->nullable();
+            $table->string('left_thumb')->nullable();
             $table->timestamps();
         });
     }

@@ -6,6 +6,9 @@ import {FaCaretDown} from "react-icons/fa";
 
 const ContactAdress = () => {
     const history = useHistory();
+    const handleUpload = () =>{
+      return history.push("/home/register/upload")
+    }
 
     const initialState = {
         driver_id: localStorage.getItem('created_id'),
@@ -32,7 +35,6 @@ const ContactAdress = () => {
 
       axios.post('/home/register/contact', contactAddress)
           .then(res => {
-              localStorage.setItem('contact_id', JSON.stringify(res.data.data.id));
               history.push('/register/upload');
           })
           .catch(err => err);
@@ -208,7 +210,7 @@ const ContactAdress = () => {
       </div>
       <div className="save">
         <div className="">
-          <button type="submit">Save</button>
+          <button type="submit" onClick={handleUpload} >Save</button>
         </div>
       </div>
     </form>

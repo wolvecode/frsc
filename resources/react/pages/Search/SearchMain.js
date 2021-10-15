@@ -18,7 +18,6 @@ const SearchMain = () => {
     //     .catch(err => err);
     // }, []);
     
-    // console.log(data);
     
     return (
         <>

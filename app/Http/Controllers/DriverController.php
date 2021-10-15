@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Driver;
 use App\Models\DriverContact;
 use App\Models\DriversContact;
+use App\Models\DriversUpload;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -28,6 +29,17 @@ class DriverController extends Controller
 
         return response()->json(['data' => $data]);
     }
+
+
+    public function picture(Request $request)
+    {
+        $request->validate(['id' => 'required']);
+
+        $data = Driver::find(4)->picture->passport;
+
+        return response()->json(['data' => $data]);
+    }
+
 
     public function search(Request $request)
     {
@@ -113,28 +125,16 @@ class DriverController extends Controller
 
     public function upload(Request $request)
     {
-        $request->validate([
-//            'driver_id' => 'required',
-            'profile_pic' => 'required|mimes:png,jpg,jpeg|max:2048',
+        $upload = $request->validate([
+            'driver_id' => 'required',
+            'passport' => 'required',
+            'left_thumb' => 'required',
+            'right_thumb' => 'required',
         ]);
 
-        if($request->hasFile('profile_pic')) {
+        $data = DriversUpload::create($upload);
 
-            $request->file('profile_pic')->storePublicly('public/profile');
-
-            $fileName = $request->file('attachment')->hashName('storage/profile');
-
-            $data = Driver::create([
-                'driver_id' => $request->input('driver_id'),
-                'attachment' => $fileName
-            ]);
-
-            return $request->expectsJson()
-                ? response()->json(['message' => 'Driver picture upload successful', 'data' => $data], Response::HTTP_OK)
-                : redirect()->route('home');
-        }
-
-        return back();
+        return  response()->json(['message' => 'Driver picture uploaded', 'data' => $data], Response::HTTP_OK);
     }
 
     /**

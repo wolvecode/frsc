@@ -33,6 +33,7 @@ Route::prefix('home')->middleware('auth')->group(function () {
 
     //All post request
     Route::post('/drivers', [DriverController::class, 'index']);
+    Route::post('/driver/picture', [DriverController::class, 'picture']);
     Route::post('/drivers/search', [DriverController::class, 'search']);
     Route::post('/drivers/count', [DriverController::class, 'offense']);
     Route::post('/drivers/rand', [DriverController::class, 'randomDriver']);
