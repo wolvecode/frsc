@@ -62,6 +62,7 @@ const ContactAdress = () => {
                             placeholder="2, Adebowale|"
                             className="user_input"
                             onChange={handleChange}
+                            required
                         />
                     </div>
                 </div>
@@ -79,6 +80,7 @@ const ContactAdress = () => {
                             value={city}
                             onChange={handleChange}
                             className="user_input"
+                            required
                         >
                             <option value="">Please select city</option>
                             <option value="Male">Irewolede</option>
@@ -99,6 +101,7 @@ const ContactAdress = () => {
                             value={lga}
                             onChange={handleChange}
                             className="user_input"
+                            required
                         >
                             <option value="">Please select LGA</option>
                             <option value="Male">Ilorin-west</option>
@@ -120,6 +123,7 @@ const ContactAdress = () => {
                             value={state}
                             onChange={handleChange}
                             className="user_input"
+                            required
                         >
                             <option value="">Please select state</option>
                             <option value="Male">Kwara</option>
@@ -138,6 +142,7 @@ const ContactAdress = () => {
                             placeholder="Zip code"
                             className="user_input"
                             onChange={handleChange}
+                            required
                         />
                     </div>
                 </div>

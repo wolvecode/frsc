@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
 import axios from "axios";
 
 const UserInfo = () => {
+    const [states, setStates] = useState([]);
     const [surName, setSurname] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
@@ -190,8 +191,8 @@ const UserInfo = () => {
                             className="user_input"
                         >
                             <option value="">select gender</option>
-                            <option value="Male">Male</option>
                             <option value="Female">Female</option>
+                            <option value="Male">Male</option>
                         </select>
                     </div>
                 </div>
@@ -213,7 +214,7 @@ const UserInfo = () => {
                         >
                             <option value="">Select nationality</option>
                             <option value="Nigeria">Nigeria</option>
-                            <option value="Congo">Congo</option>
+                            <option value="Congo">Non-Nigerian</option>
                         </select>
                     </div>
                 </div>
@@ -232,8 +233,16 @@ const UserInfo = () => {
                             className="user_input"
                         >
                             <option value="">Select state</option>
-                            <option value="Nigeria">Nigeria</option>
-                            <option value="Congo">Congo</option>
+                            <option value="ABIA">ABIA</option>
+                            <option value="Adamawa">Adamawa</option>
+                            <option value="Akwa">Akwa</option>
+                            <option value="Benuw">Benue</option>
+                            <option value="Bauchi">Bauchi</option>
+                            <option value="Nasarawa">Nasarawa</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Oyo">Oyo</option>
+                            <option value="Osun">Osun</option>
+                            <option value="Taraba">Taraba</option>
                         </select>
                     </div>
                 </div>
@@ -252,8 +261,13 @@ const UserInfo = () => {
                             className="user_input"
                         >
                             <option value="">Select local government</option>
-                            <option value="Nigeria">Nigeria</option>
-                            <option value="Congo">Congo</option>
+                            <option value="Arochukwu">Arochukwu</option>
+                            <option value="Bende">Bende</option>
+                            <option value="Ikwuano">Ikwuano</option>
+                            <option value="Isiala">Isiala</option>
+                            <option value="Isiala Ngwa South">Isiala Ngwa South</option>
+                            <option value="Isuikwuato">Isuikwuato</option>
+                            <option value="Obi Ngwa">Obi Ngwa</option>
                         </select>
                     </div>
                 </div>

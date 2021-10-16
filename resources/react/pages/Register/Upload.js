@@ -72,7 +72,7 @@ const Upload = () => {
             .catch((err) => err);
     };
 
-    const image = JSON.parse(localStorage.getItem("image"));
+    const image = localStorage.getItem("image");
 
     return (
         <div>

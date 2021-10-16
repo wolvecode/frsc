@@ -14,7 +14,7 @@ const WebCam = ({ setPreview, preview, WebCam, setWebCam }) => {
     }
 
     useEffect(() => {
-        localStorage.setItem("image", JSON.stringify(dataUri));
+        localStorage.setItem("image", dataUri);
     }, [dataUri]);
 
     const isFullscreen = true;
