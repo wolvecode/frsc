@@ -15,7 +15,7 @@ class CreateDriversUploadsTable extends Migration
     {
         Schema::create('drivers_uploads', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('driver_id')->constrained('drivers');
+            $table->foreignId('driver_id')->constrained('drivers')->onDelete('cascade');
             $table->string('passport');
             $table->string('right_thumb')->nullable();
             $table->string('left_thumb')->nullable();

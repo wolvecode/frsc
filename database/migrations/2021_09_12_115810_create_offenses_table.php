@@ -15,7 +15,7 @@ class CreateOffensesTable extends Migration
     {
         Schema::create('offenses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('driver_id')->constrained('drivers');
+            $table->foreignId('driver_id')->constrained('drivers')->onDelete('cascade');
             $table->string('offense');
             $table->string('paid')->default(false);
             $table->string('code');

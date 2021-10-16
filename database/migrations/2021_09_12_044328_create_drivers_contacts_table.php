@@ -15,7 +15,7 @@ class CreateDriversContactsTable extends Migration
     {
         Schema::create('drivers_contacts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('driver_id')->constrained('drivers');
+            $table->foreignId('driver_id')->constrained('drivers')->onDelete('cascade');
             $table->string('address_1');
             $table->string('city');
             $table->string('lga');

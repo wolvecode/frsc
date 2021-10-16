@@ -15,7 +15,7 @@ class CreateDriversTable extends Migration
     {
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('offense_id')->nullable()->constrained('offenses');
+            $table->foreignId('offense_id')->nullable()->constrained('offenses')->onDelete('cascade');
             $table->string('surname');
             $table->string('firstname');
             $table->string('lastname');
