@@ -19,7 +19,6 @@ import * as Icon from "react-icons/gi";
 const DashBoard = () => {
     const { path, url } = useRouteMatch();
 
-    
     useEffect(() => {
         axios
             .post("/home/offense")
@@ -28,18 +27,17 @@ const DashBoard = () => {
             })
             .catch((err) => err);
     }, []);
-    
+
     const [addOffence, setAddOffence] = useState(false);
 
     const [data, setData] = useState([]);
 
-    const handleOffense = () =>{
-      setAddOffence(!addOffence)
-    }
-    
+    const handleOffense = () => {
+        setAddOffence(!addOffence);
+    };
+
     return (
         <>
-
             <div className="page_content">
                 <PageWrapper>
                     <div className="col_content">
@@ -48,13 +46,12 @@ const DashBoard = () => {
                                 <h3>Driver Record</h3>
                                 <span>Enter crimes to record</span>
                             </div>
-                            <button className="btn" onClick={handleOffense} >
+                            {/* <button className="btn" onClick={handleOffense}>
                                 <span>
                                     <Icon.GiCheckMark />
                                 </span>
-                                
                                 Enter crimes to record
-                            </button>
+                            </button> */}
                         </div>
                         <hr className="line" />
                         <div
@@ -80,46 +77,45 @@ const DashBoard = () => {
                                 >
                                     All Offences
                                 </NavLink>
+                                {/*<NavLink*/}
+                                {/*    to={`${url}/criminal`}*/}
+                                {/*    className="navLink"*/}
+                                {/*    activeClassName="dash_active"*/}
+                                {/*>*/}
+                                {/*    Criminal Offenses*/}
+                                {/*</NavLink>*/}
 
-                                <NavLink
-                                    to={`${url}/criminal`}
-                                    className="navLink"
-                                    activeClassName="dash_active"
-                                >
-                                    Criminal Offenses
-                                </NavLink>
-
-                                <NavLink
-                                    to={`${url}/nonCriminal`}
-                                    className="navLink"
-                                    activeClassName="dash_active"
-                                >
-                                    Non-Criminal Offenses
-                                </NavLink>
+                                {/*<NavLink*/}
+                                {/*    to={`${url}/nonCriminal`}*/}
+                                {/*    className="navLink"*/}
+                                {/*    activeClassName="dash_active"*/}
+                                {/*>*/}
+                                {/*    Non-Criminal Offenses*/}
+                                {/*</NavLink>*/}
                             </div>
-                            
-                            {addOffence ? (<AddOffense setAddOffence={setAddOffence} addOffence={addOffence} />) : null }
+
+                            {addOffence ? (
+                                <AddOffense
+                                    setAddOffence={setAddOffence}
+                                    addOffence={addOffence}
+                                />
+                            ) : null}
 
                             <hr className="" />
                             <div className="offence_result">
                                 <Switch>
-
                                     <Route exact path={`${path}/`}>
-                                      <NonCriminal data={data} />
+                                        <NonCriminal data={data} />
                                     </Route>
 
-                                    <Route  to={`${path}/criminal`}>
+                                    <Route to={`${path}/criminal`}>
                                         <Criminal data={data} />
                                     </Route>
 
                                     <Route exact path={`${path}/`}>
-                                      <AllOffense data={data} />
+                                        <AllOffense data={data} />
                                     </Route>
-
-
                                 </Switch>
-
-                                
                             </div>
                         </div>
                     </div>

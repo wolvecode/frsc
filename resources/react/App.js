@@ -32,7 +32,7 @@ const App = () => {
                     <UserInfo />
                 </Route>
 
-                <Route exact path="/home/scan">
+                <Route path="/home/scan">
                     <Scan />
                 </Route>
 

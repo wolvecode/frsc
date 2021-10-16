@@ -18,7 +18,7 @@ const SearchMain = () => {
     //     .catch(err => err);
     // }, []);
     
-    
+
     return (
         <>
             <div className="page_content">

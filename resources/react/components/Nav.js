@@ -25,8 +25,8 @@ const Nav = () => {
             </NavLink>
         </div>
 
-        <div className=" nav_item btn">
-          <NavLink to="/home/register" activeClassName="" exact>
+        <div className=" nav_item">
+          <NavLink to="/home/register" activeClassName="active" exact>
             <span>
               <AiOutlineUser />
             </span>

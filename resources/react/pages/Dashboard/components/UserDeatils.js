@@ -26,6 +26,7 @@ const UserDeatils = () => {
             .post("/home/driver/picture", { id: user.id })
             .then((res) => {
                 setPic(res.data.data);
+                localStorage.setItem("d_id", user.id);
             })
             .catch((err) => err);
     }, [user]);

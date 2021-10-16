@@ -62,7 +62,7 @@ const AddOffense = ({ setAddOffence, addOffence }) => {
             category: offenseCategory,
             penalty: offensePenalty,
             location: location,
-            driver_id: driver_id,
+            driver_id: localStorage.getItem("d_id"),
         };
 
         axios
@@ -86,27 +86,6 @@ const AddOffense = ({ setAddOffence, addOffence }) => {
                     <h1>Add Offense</h1>
 
                     <form className="full">
-                        <div className="form_group">
-                            <div className="sub_form_group driver  ">
-                                <label htmlFor="driver_id">Choose Driver</label>
-                                <div className="relative ">
-                                    <label className="option">
-                                        <FaCaretDown />
-                                    </label>
-                                    <select
-                                        name="driver_id"
-                                        className="user_input_driver"
-                                        onChange={handleDriver_id}
-                                        value={driver_id}
-                                    >
-                                        {/* <option value="1">Choose Driver </option>
-                            <option value="2">Azeez Biodun Habeeb</option>
-                            <option value="3">Habeeb Biodun Habeeb</option> */}
-                                        {selectOptions}
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
                         <div className="form_group full">
                             <div className="sub_form_group group_1">
                                 <label htmlFor="gender">Select Offense</label>
@@ -120,8 +99,38 @@ const AddOffense = ({ setAddOffence, addOffence }) => {
                                         value={driverOffense}
                                         onChange={handleDriverOffense}
                                     >
-                                        <option value="robbery">
-                                           Robbery
+                                        <option value="">
+                                            Select Criminal offense
+                                        </option>
+                                        <option value="Road Marking Violation">
+                                            Road Marking Violation
+                                        </option>
+                                        <option value="Vehicle licence Violation">
+                                            Vehicle licence Violation
+                                        </option>
+                                        <option value="Wrongful Overtaking">
+                                            Wrongful Overtaking
+                                        </option>
+                                        <option value=" Light Violation">
+                                            Light Violation
+                                        </option>
+                                        <option value="Road Marking Violation">
+                                            Road Marking Violation
+                                        </option>
+                                        <option value="Sign Violation">
+                                            Sign Violation
+                                        </option>
+                                        <option value="Road Obstruction">
+                                            Road Obstruction
+                                        </option>
+                                        <option value="Overloading">
+                                            Overloading
+                                        </option>
+                                        <option value="Road Obstructionery">
+                                            Road Obstruction
+                                        </option>
+                                        <option value="Driver's License Violation">
+                                            Driver's License Violation
                                         </option>
                                         <option value="Speed Limit Violation">
                                             Speed Limit Violation
