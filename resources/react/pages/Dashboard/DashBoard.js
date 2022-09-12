@@ -21,8 +21,9 @@ const DashBoard = () => {
 
     useEffect(() => {
         axios
-            .post("/home/offense")
+            .post("/home/user/offense", { driver_id: 1})
             .then((res) => {
+                console.log(res.data.data)
                 setData(res.data.data);
             })
             .catch((err) => err);

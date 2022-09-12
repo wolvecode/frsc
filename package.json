@@ -17,7 +17,10 @@
         "sass-loader": "^12.1.0"
     },
     "dependencies": {
+        "@fingerprintjs/fingerprintjs": "^3.3.0",
+        "browser-fingerprint": "^0.1.0",
         "cotter": "^0.3.35",
+        "get-browser-fingerprint": "^2.0.1",
         "node-sass": "^6.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",

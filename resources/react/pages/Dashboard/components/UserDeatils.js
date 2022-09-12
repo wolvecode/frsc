@@ -30,7 +30,6 @@ const UserDeatils = () => {
             })
             .catch((err) => err);
     }, [user]);
-    console.log("pic:", pic);
     // fetch total offense
     useEffect(() => {
         axios

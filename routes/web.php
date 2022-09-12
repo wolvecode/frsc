@@ -45,7 +45,8 @@ Route::prefix('home')->middleware('auth')->group(function () {
 
     //Offense
     Route::post('/offense', [OffenseController::class, 'index']);
-    Route::post('/offense/search', [OffenseController::class, 'search']);
+    Route::post('/user/offense', [OffenseController::class, 'user']);
+    // Route::post('/offense/search', [OffenseCont roller::class, 'search']);
     Route::post('/add/offense', [OffenseController::class, 'store']);
 
 });
